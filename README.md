@@ -14,10 +14,10 @@ Exact version numbers probably not important.
 Usage
 -----
 
-0) Install the dependencies listed above.
+1. Install the dependencies listed above.
 
-1) Save any font files to be used with this module in the /fonts directory. The filename of the font used in the image is a command line argument. Defaults to Octin Stencil, which is available free for download here: http://www.fontspring.com/fonts/typodermic/octin-college.
+2. Save any font files to be used with this module in the /fonts directory. The filename of the font used in the image is a command line argument. Defaults to Octin Stencil, which is available free for download here: http://www.fontspring.com/fonts/typodermic/octin-college.
 
-2) Run from the command line. The one required argument is the text to include in the outputted image, but the dimensions, number of letters per row, and font to use are also customizable.
+3. Run from the command line. The one required argument is the text to include in the outputted image, but the dimensions, number of letters per row, and font to use are also customizable.
 
 This module is used to generate the images on http://newsbuzzlife.tumblr.com.
