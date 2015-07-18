@@ -14,6 +14,7 @@ def parse_arguments():
 	parser.add_argument('-s','--string', default=None, help="text to paint")
 	parser.add_argument('-la','--letters_across', type=int, default=6)
 	parser.add_argument('-f','--font_file', default='octin_spraypaint_free.ttf', help="name of font file in /fonts directory")
+	parser.add_argument('-fs','--font_size', type=int, default=200)
 	parser.add_argument('-id','--img_dim', type=int, default=255, help="dimensions of image in pixels")
 
 	return parser.parse_args()
@@ -24,7 +25,7 @@ def insert_newlines(string, every):
 	"""	
 	return '\n'.join(string[i:i+every] for i in xrange(0, len(string), every))
 
-def woolify(text,letters_across,font_size,pixels,color=1,fontfile):
+def woolify(text,letters_across,font_size,pixels,fontfile,color=1):
 	"""
 	Creates PIL image file of wrap-around text graphic. Defults to black stencil.
 	:param str text:
@@ -69,7 +70,7 @@ def main():
 	ch.setFormatter(formatter)
 	logger.addHandler(ch)
 
-	im = woolify(args.string,args.letters_across,args.font_size,args.img_dim)
+	im = woolify(args.string,args.letters_across,args.font_size,args.img_dim,args.font_file)
 	im.show()
 
 	return
