@@ -25,7 +25,7 @@ def insert_newlines(string, every):
 	"""	
 	return '\n'.join(string[i:i+every] for i in xrange(0, len(string), every))
 
-def woolify(text,letters_across,font_size,pixels,fontfile,color=1):
+def woolify(string,letters_across,font_size,pixels,fontfile,color=1):
 	"""
 	Creates PIL image file of wrap-around text graphic. Defults to black stencil.
 	:param str text:
@@ -37,7 +37,6 @@ def woolify(text,letters_across,font_size,pixels,fontfile,color=1):
 	:return PIL.Image:
 	"""
 	# format and wrap string
-	string = text
 	string = string.upper()
 	string = string.replace(' ','')
 	rows_down = int(ceil(len(string)/float(letters_across)))
