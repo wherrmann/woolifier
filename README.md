@@ -7,6 +7,8 @@ Dependencies
   * Python 2.7
   * Pillow 2.9.0
   * Distribute 0.6.24
+  * Argparse 1.2.1
+  * Wsgiref 0.1.2
 
 
 Exact version numbers probably not important.
